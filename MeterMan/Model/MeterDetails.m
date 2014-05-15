@@ -29,24 +29,26 @@ static NSString * const FONT_FAMILY_FOR_TYPE_IMAGE = @"GillSans";       // Verda
 
 + (UIImage *)imageForType:(UtilityType)type {
     UIFont *font = [UIFont fontWithName:FONT_FAMILY_FOR_TYPE_IMAGE size:FONT_SIZE_FOR_TYPE_IMAGE];
-    NSString *text = nil;
+    NSString *nameOfTheUtility = nil;
     
     switch (type) {
         case UtilityTypeWater:
-            text = @"W";
+            nameOfTheUtility = NSLocalizedString(@"Water", @"Supply name: water");
             break;
             
         case UtilityTypeGas:
-            text = @"G";
+            nameOfTheUtility = NSLocalizedString(@"Gas", @"Supply name: gas");;
             break;
             
         case UtilityTypeElectricity:
-            text = @"E";
+            nameOfTheUtility = NSLocalizedString(@"Electricity", @"Supply name: electricity");
             break;
             
     }
     
-    return [MeterManUtil imageWithText:text usingFont:font andSize:SIZE_FOR_TYPE_IMAGE];
+    NSString *firstLetter = [nameOfTheUtility substringToIndex:1];
+    
+    return [MeterManUtil imageWithText:firstLetter usingFont:font andSize:SIZE_FOR_TYPE_IMAGE];
     
 }
 

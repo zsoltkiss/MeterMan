@@ -7,12 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "MeterManUtil.h"
+
+@interface AppDelegate () {
+    EKCalendar *_calendar;
+}
+
+@end
 
 @implementation AppDelegate
+
+@synthesize appCalendar = _calendar;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+//    _calendar = [MeterManUtil meterManCalendar];
+    
     return YES;
 }
 							
@@ -42,5 +54,9 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
 
 @end

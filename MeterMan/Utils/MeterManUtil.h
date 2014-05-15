@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "MeterDetails.h"
+#import <EventKit/EventKit.h>
 
 @interface MeterManUtil : NSObject
 
 + (UIImage *)imageWithText:(NSString *)text usingFont:(UIFont *)font andSize:(CGSize)size;
 + (UIColor *)bgColorForUtilityType:(UtilityType)type;
+
++ (EKCalendar *)meterManCalendar;
+
++ (void)createReminderWithTitle:(NSString *)reminderTitle forDate:(NSDate *)reminderDate;
 
 
 

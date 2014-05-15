@@ -1,0 +1,33 @@
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "4vq-vX-a0K"; */
+"4vq-vX-a0K.text" = "Label";
+
+/* Class = "IBUIBarButtonItem"; title = "My meters"; ObjectID = "AOb-Yp-IhO"; */
+"AOb-Yp-IhO.title" = "Mérőóráim";
+
+/* Class = "IBUIBarButtonItem"; title = "Home"; ObjectID = "GSC-LQ-qXO"; */
+"GSC-LQ-qXO.title" = "Kezdőlap";
+
+/* Class = "IBUILabel"; text = "Gas"; ObjectID = "Jek-Wg-i1Q"; */
+"Jek-Wg-i1Q.text" = "Gáz";
+
+/* Class = "IBUILabel"; text = "Electricity"; ObjectID = "JhA-ZF-Tx2"; */
+"JhA-ZF-Tx2.text" = "Áram";
+
+/* Class = "IBUINavigationItem"; title = "My meters"; ObjectID = "UZz-xn-lrJ"; */
+"UZz-xn-lrJ.title" = "Mérőóráim";
+
+/* Class = "IBUILabel"; text = "Water"; ObjectID = "l18-i6-vE3"; */
+"l18-i6-vE3.text" = "Víz";
+
+/* Class = "IBUITableViewController"; title = "My meters"; ObjectID = "m1a-GE-j7Q"; */
+"m1a-GE-j7Q.title" = "Mérőóráim";
+
+/* Class = "IBUILabel"; text = "address"; ObjectID = "pqz-iO-vWY"; */
+"pqz-iO-vWY.text" = "cím";
+
+/* Class = "IBUIViewController"; title = "Home"; ObjectID = "vXZ-lx-hvc"; */
+"vXZ-lx-hvc.title" = "Kezdőlap";
+
+/* Class = "IBUILabel"; text = "meter ID"; ObjectID = "zfc-Vn-DVN"; */
+"zfc-Vn-DVN.text" = "Azonosító";

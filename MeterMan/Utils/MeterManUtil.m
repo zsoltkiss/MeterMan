@@ -8,6 +8,8 @@
 
 #import "MeterManUtil.h"
 
+static NSString * const APP_CALENDAR_KEY = @"MeterManCalendar";
+
 @implementation MeterManUtil
 
 
@@ -57,6 +59,81 @@
     }
     
     return nil;
+}
+
++ (EKCalendar *)meterManCalendar {
+    EKCalendar *calendar;
+    
+    EKEventStore *eventStore = [[EKEventStore alloc] init];
+    
+    EKSource *localSource = nil;
+    for (EKSource *someSource in eventStore.sources) {
+        if (someSource.sourceType == EKSourceTypeLocal) {
+            localSource = someSource;
+        }
+    }
+    
+    NSString *calendarId = [[NSUserDefaults standardUserDefaults] objectForKey:APP_CALENDAR_KEY];
+   
+    if (calendarId == nil || calendarId.length == 0) {
+        // We have to create the calendar if it doesn't exist yet
+        
+        calendar = [EKCalendar calendarForEntityType:EKEntityTypeReminder eventStore:eventStore];
+        calendar.title = NSLocalizedString(@"Timing meter reading", @"Title of the local calendar used by the app");
+        calendar.source = localSource;
+        NSError *creationError;
+        if ([eventStore saveCalendar:calendar commit:YES error:&creationError] == NO) {
+            NSLog(@"Calendar creation failed. %@", creationError.localizedDescription);
+        } else {
+            // Calendar successfully created
+            [[NSUserDefaults standardUserDefaults] setObject:calendar.calendarIdentifier forKey:APP_CALENDAR_KEY];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            NSLog(@"Calendar created with id: %@", calendar.calendarIdentifier);
+        }
+    } else {
+        calendar = [eventStore calendarWithIdentifier:calendarId];
+    }
+    
+    return calendar;
+    
+}
+
++ (void)createReminderWithTitle:(NSString *)reminderTitle forDate:(NSDate *)reminderDate {
+    
+    NSLog(@"%@ called with: %@, %@", NSStringFromSelector(_cmd), reminderTitle, reminderDate);
+    
+    EKEventStore *eventStore = [[EKEventStore alloc] init];
+    
+    [eventStore requestAccessToEntityType:EKEntityTypeReminder completion:^(BOOL granted, NSError *error) {
+        if (!granted) {
+            NSLog(@"Access to Event Store not granted");
+        } else {
+            
+            
+            EKReminder *reminder = [EKReminder reminderWithEventStore:eventStore];
+            
+            reminder.title = reminderTitle;
+            reminder.priority = 4;
+            
+            reminder.calendar = [eventStore defaultCalendarForNewReminders];
+            
+            EKAlarm *alarm = [EKAlarm alarmWithAbsoluteDate:reminderDate];
+            
+            [reminder addAlarm:alarm];
+            
+            NSError *error = nil;
+            BOOL success = [eventStore saveReminder:reminder commit:YES error:&error];
+            
+            if (!success) {
+                NSLog(@"Error occured when creating reminder. %@", error.localizedDescription);
+            }
+            
+            
+        }
+    }];
+    
+    
+    
 }
 
 

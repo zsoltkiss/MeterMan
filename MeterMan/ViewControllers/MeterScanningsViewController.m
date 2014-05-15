@@ -7,6 +7,7 @@
 //
 
 #import "MeterScanningsViewController.h"
+#import "MeterManUtil.h"
 
 @interface MeterScanningsViewController () {
     PDTSimpleCalendarViewController *_calendarVC;
@@ -55,23 +56,23 @@
         
     }
     
-    PDTSimpleCalendarViewController *calendarViewController = [[PDTSimpleCalendarViewController alloc] init];
-    //This is the default behavior, will display a full year starting the first of the current month
-    [calendarViewController setDelegate:self];
-    
-    _calendarVC = calendarViewController;
-    
-    CGFloat w = [[UIScreen mainScreen] bounds].size.width;
-    CGFloat h = [[UIScreen mainScreen] bounds].size.height - CGRectGetMaxY(self.lbInstallationAddress.frame) - 10.0f;
-    
-    CGRect frame;
-    frame.origin.x = 0;
-    frame.origin.y = CGRectGetMaxY(self.lbMeterId.frame) + 10.0f;
-    frame.size.width = w;
-    frame.size.height = h;
-    
-    _calendarVC.view.frame = frame;
-    [self.view addSubview:_calendarVC.view];
+//    PDTSimpleCalendarViewController *calendarViewController = [[PDTSimpleCalendarViewController alloc] init];
+//    //This is the default behavior, will display a full year starting the first of the current month
+//    [calendarViewController setDelegate:self];
+//    
+//    _calendarVC = calendarViewController;
+//    
+//    CGFloat w = [[UIScreen mainScreen] bounds].size.width;
+//    CGFloat h = [[UIScreen mainScreen] bounds].size.height - CGRectGetMaxY(self.lbInstallationAddress.frame) - 10.0f;
+//    
+//    CGRect frame;
+//    frame.origin.x = 0;
+//    frame.origin.y = CGRectGetMaxY(self.lbMeterId.frame) + 10.0f;
+//    frame.size.width = w;
+//    frame.size.height = h;
+//    
+//    _calendarVC.view.frame = frame;
+//    [self.view addSubview:_calendarVC.view];
     
     
     
@@ -88,4 +89,36 @@
     NSLog(@"selected date: %@", date);
 }
 
+
+
+- (IBAction)addReminder:(id)sender {
+    
+    NSString *template = NSLocalizedString(@"Meter check is due", @"Reminder title");
+    
+    NSString *reminderTitle = [NSString stringWithFormat:@"%@: %@", template, self.meterDetails.alias];
+    
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDate *date = [NSDate date];
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setHour:2];
+    [components setMinute:30];
+    
+    
+//    [components setYear:2014];
+//    [components setMonth:4];
+//    [components setDay:15];
+//    [components setHour:19];
+//    [components setMinute:55];
+//    [components setSecond:0];
+
+    
+    NSDate *someDateInTheFuture = [calendar dateByAddingComponents:components toDate:date options:0];
+    
+    NSLog(@"4 weeks later date: %@", someDateInTheFuture);
+    
+    [MeterManUtil createReminderWithTitle:reminderTitle forDate:someDateInTheFuture];
+    
+}
 @end

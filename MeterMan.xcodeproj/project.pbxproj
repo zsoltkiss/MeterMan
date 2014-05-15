@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		43735C501923BA7100C73C28 /* MeterScanningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */; };
+		43B2110A1924B170005F9378 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B211091924B170005F9378 /* EventKit.framework */; };
+		43B211101924B652005F9378 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43B211121924B652005F9378 /* Localizable.strings */; };
 		43C6BDFB19237159004E8768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C6BDFA19237159004E8768 /* Foundation.framework */; };
 		43C6BDFD19237159004E8768 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C6BDFC19237159004E8768 /* CoreGraphics.framework */; };
 		43C6BDFF19237159004E8768 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C6BDFE19237159004E8768 /* UIKit.framework */; };
@@ -43,6 +45,12 @@
 /* Begin PBXFileReference section */
 		43735C4E1923BA7100C73C28 /* MeterScanningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterScanningsViewController.h; sourceTree = "<group>"; };
 		43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterScanningsViewController.m; sourceTree = "<group>"; };
+		43B211091924B170005F9378 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		43B2110B1924B5A7005F9378 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
+		43B2110C1924B5A7005F9378 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43B2110D1924B5A7005F9378 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		43B211131924B65C005F9378 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43B211141924B65F005F9378 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43C6BDF719237159004E8768 /* MeterMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeterMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C6BDFA19237159004E8768 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43C6BDFC19237159004E8768 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B2110A1924B170005F9378 /* EventKit.framework in Frameworks */,
 				43C6BDFD19237159004E8768 /* CoreGraphics.framework in Frameworks */,
 				43C6BDFF19237159004E8768 /* UIKit.framework in Frameworks */,
 				43C6BDFB19237159004E8768 /* Foundation.framework in Frameworks */,
@@ -122,6 +131,7 @@
 		43C6BDF919237159004E8768 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43B211091924B170005F9378 /* EventKit.framework */,
 				43C6BDFA19237159004E8768 /* Foundation.framework */,
 				43C6BDFC19237159004E8768 /* CoreGraphics.framework */,
 				43C6BDFE19237159004E8768 /* UIKit.framework */,
@@ -154,6 +164,7 @@
 				43C6BE0319237159004E8768 /* InfoPlist.strings */,
 				43C6BE0619237159004E8768 /* main.m */,
 				43C6BE0819237159004E8768 /* MeterMan-Prefix.pch */,
+				43B211121924B652005F9378 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,6 +276,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Zsolt Kiss";
 				TargetAttributes = {
+					43C6BDF619237159004E8768 = {
+						DevelopmentTeam = 7G2U4UHT33;
+					};
 					43C6BE1719237159004E8768 = {
 						TestTargetID = 43C6BDF619237159004E8768;
 					};
@@ -277,6 +291,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hu,
 			);
 			mainGroup = 43C6BDEE19237159004E8768;
 			productRefGroup = 43C6BDF819237159004E8768 /* Products */;
@@ -295,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C6BE3219237375004E8768 /* utility_meter.jpg in Resources */,
+				43B211101924B652005F9378 /* Localizable.strings in Resources */,
 				43C6BE3319237375004E8768 /* utility_meter@2x.jpg in Resources */,
 				43C6BE1319237159004E8768 /* Images.xcassets in Resources */,
 				43C6BE0519237159004E8768 /* InfoPlist.strings in Resources */,
@@ -379,10 +395,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		43B211121924B652005F9378 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43B211131924B65C005F9378 /* en */,
+				43B211141924B65F005F9378 /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		43C6BE0319237159004E8768 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				43C6BE0419237159004E8768 /* en */,
+				43B2110C1924B5A7005F9378 /* hu */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -391,6 +417,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				43C6BE0D19237159004E8768 /* Base */,
+				43B2110B1924B5A7005F9378 /* hu */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -399,6 +426,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				43C6BE2319237159004E8768 /* en */,
+				43B2110D1924B5A7005F9378 /* hu */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -484,6 +512,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeterMan/MeterMan-Prefix.pch";
 				INFOPLIST_FILE = "MeterMan/MeterMan-Info.plist";
@@ -498,6 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MeterMan/MeterMan-Prefix.pch";
 				INFOPLIST_FILE = "MeterMan/MeterMan-Info.plist";

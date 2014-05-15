@@ -20,4 +20,6 @@
 
 @property(nonatomic, strong) MeterDetails *meterDetails;
 
+- (IBAction)addReminder:(id)sender;
+
 @end
