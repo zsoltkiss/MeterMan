@@ -9,3 +9,6 @@
 "Gas" = "Gáz";
 "Electricity" = "Áram";
 "Meter check is due" = "Mérőóra leolvasás";
+
+
+"Missing data" = "Nincs megadva minden kötelező adat";

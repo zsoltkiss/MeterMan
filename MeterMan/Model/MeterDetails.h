@@ -8,26 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, UtilityType) {
-    UtilityTypeWater,
-    UtilityTypeGas,
-    UtilityTypeElectricity
-};
-
 @interface MeterDetails : NSObject
 
-@property(nonatomic, assign) UtilityType type;
+@property(nonatomic, assign) PublicUtilityType type;
 @property(nonatomic, strong) NSString *alias;
 @property(nonatomic, strong) NSString *meterId;
 @property(nonatomic, strong) NSString *ownerName;
 @property(nonatomic, strong) NSString *installationAddress;
 @property(nonatomic, readonly) NSDictionary *moreProperties;
 @property(nonatomic, strong) UIImage *meterImage;
-@property(nonatomic, readonly) UIImage *typeImage;
+//@property(nonatomic, readonly) UIImage *typeImage;
 
-+ (UIImage *)imageForType:(UtilityType)type;
+//+ (UIImage *)imageForType:(PublicUtilityType)type;
 
-- (instancetype)initWithType:(UtilityType)type;
+- (instancetype)initWithType:(PublicUtilityType)type;
 - (void)addPropertyWithKey:(NSString *)key andValue:(NSString *)value;
 
 

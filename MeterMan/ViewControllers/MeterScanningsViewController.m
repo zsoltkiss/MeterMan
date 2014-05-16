@@ -8,6 +8,7 @@
 
 #import "MeterScanningsViewController.h"
 #import "MeterManUtil.h"
+#import "UtilityType.h"
 
 @interface MeterScanningsViewController () {
     PDTSimpleCalendarViewController *_calendarVC;
@@ -34,8 +35,8 @@
     self.lbInstallationAddress.text = nil;
     self.lbMeterId.text = nil;
     
-    if (self.meterDetails) {
-        UIImage *typeImage = [self.meterDetails typeImage];
+    if (self.selectedMeter) {
+        UIImage *typeImage =    [MeterManUtil imageForPublicUtilityType:[self.selectedMeter.utilityType.typeId integerValue]];              
         UIImageView *imgView = [[UIImageView alloc] initWithImage:typeImage];
         
         CGFloat x = (CGRectGetWidth(self.holderView.frame) - CGRectGetWidth(imgView.frame)) / 2;
@@ -50,9 +51,13 @@
         [self.holderView addSubview:imgView];
 //        imgView.center = self.holderView.center;
         
-        self.lbAlias.text = _meterDetails.alias;
-        self.lbInstallationAddress.text = self.meterDetails.installationAddress;
-        self.lbMeterId.text = self.meterDetails.meterId;
+        self.lbAlias.text = self.selectedMeter.alias;
+        self.lbInstallationAddress.text = self.selectedMeter.installationAddress;
+        self.lbMeterId.text = self.selectedMeter.productNumber;
+        self.lbOwner.text = self.selectedMeter.ownerName;
+        self.lbSupplierPhone.text = self.selectedMeter.supplierPhone;
+
+
         
     }
     
@@ -95,7 +100,7 @@
     
     NSString *template = NSLocalizedString(@"Meter check is due", @"Reminder title");
     
-    NSString *reminderTitle = [NSString stringWithFormat:@"%@: %@", template, self.meterDetails.alias];
+    NSString *reminderTitle = [NSString stringWithFormat:@"%@: %@", template, self.selectedMeter.alias];
     
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -119,6 +124,16 @@
     NSLog(@"4 weeks later date: %@", someDateInTheFuture);
     
     [MeterManUtil createReminderWithTitle:reminderTitle forDate:someDateInTheFuture];
+    
+}
+
+- (IBAction)supplierPhoneLabelTapped:(UITapGestureRecognizer *)sender {
+    
+    NSString *phoneCallNum = [NSString stringWithFormat:@"tel://%@",self.selectedMeter.supplierPhone];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneCallNum]];
+    
+    NSLog(@"phone btn touch %@", phoneCallNum);
     
 }
 @end

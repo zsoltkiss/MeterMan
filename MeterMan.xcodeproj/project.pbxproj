@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4320F1E719260E0C00779D9C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4320F1E619260E0C00779D9C /* CoreData.framework */; };
+		4320F1EA1926101700779D9C /* MeterMan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4320F1E81926101700779D9C /* MeterMan.xcdatamodeld */; };
+		4320F1FD1926231400779D9C /* ScanEventDueDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F1FC1926231400779D9C /* ScanEventDueDate.m */; };
+		4320F2001926231500779D9C /* Meter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F1FF1926231500779D9C /* Meter.m */; };
+		4320F2031926231500779D9C /* UtilityType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F2021926231500779D9C /* UtilityType.m */; };
+		4320F2061926231500779D9C /* ScanEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F2051926231500779D9C /* ScanEventType.m */; };
+		4320F2091926231500779D9C /* ScanData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F2081926231500779D9C /* ScanData.m */; };
+		4320F20C1926268800779D9C /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F20B1926268800779D9C /* DBUtil.m */; };
 		43735C501923BA7100C73C28 /* MeterScanningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */; };
+		439B1F4F19263467008E93B2 /* AddMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439B1F4E19263467008E93B2 /* AddMeterViewController.m */; };
 		43B2110A1924B170005F9378 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B211091924B170005F9378 /* EventKit.framework */; };
 		43B211101924B652005F9378 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43B211121924B652005F9378 /* Localizable.strings */; };
 		43C6BDFB19237159004E8768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C6BDFA19237159004E8768 /* Foundation.framework */; };
@@ -43,8 +52,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4320F1E619260E0C00779D9C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4320F1E91926101700779D9C /* MeterMan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeterMan.xcdatamodel; sourceTree = "<group>"; };
+		4320F1FB1926231400779D9C /* ScanEventDueDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanEventDueDate.h; sourceTree = "<group>"; };
+		4320F1FC1926231400779D9C /* ScanEventDueDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanEventDueDate.m; sourceTree = "<group>"; };
+		4320F1FE1926231500779D9C /* Meter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meter.h; sourceTree = "<group>"; };
+		4320F1FF1926231500779D9C /* Meter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meter.m; sourceTree = "<group>"; };
+		4320F2011926231500779D9C /* UtilityType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UtilityType.h; sourceTree = "<group>"; };
+		4320F2021926231500779D9C /* UtilityType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilityType.m; sourceTree = "<group>"; };
+		4320F2041926231500779D9C /* ScanEventType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanEventType.h; sourceTree = "<group>"; };
+		4320F2051926231500779D9C /* ScanEventType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanEventType.m; sourceTree = "<group>"; };
+		4320F2071926231500779D9C /* ScanData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanData.h; sourceTree = "<group>"; };
+		4320F2081926231500779D9C /* ScanData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanData.m; sourceTree = "<group>"; };
+		4320F20A1926268800779D9C /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
+		4320F20B1926268800779D9C /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
 		43735C4E1923BA7100C73C28 /* MeterScanningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterScanningsViewController.h; sourceTree = "<group>"; };
 		43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterScanningsViewController.m; sourceTree = "<group>"; };
+		439B1F4D19263467008E93B2 /* AddMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMeterViewController.h; sourceTree = "<group>"; };
+		439B1F4E19263467008E93B2 /* AddMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMeterViewController.m; sourceTree = "<group>"; };
 		43B211091924B170005F9378 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		43B2110B1924B5A7005F9378 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Main.strings; sourceTree = "<group>"; };
 		43B2110C1924B5A7005F9378 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -87,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4320F1E719260E0C00779D9C /* CoreData.framework in Frameworks */,
 				43B2110A1924B170005F9378 /* EventKit.framework in Frameworks */,
 				43C6BDFD19237159004E8768 /* CoreGraphics.framework in Frameworks */,
 				43C6BDFF19237159004E8768 /* UIKit.framework in Frameworks */,
@@ -108,6 +134,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4320F1EB1926223400779D9C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4320F2071926231500779D9C /* ScanData.h */,
+				4320F2081926231500779D9C /* ScanData.m */,
+				4320F2041926231500779D9C /* ScanEventType.h */,
+				4320F2051926231500779D9C /* ScanEventType.m */,
+				4320F2011926231500779D9C /* UtilityType.h */,
+				4320F2021926231500779D9C /* UtilityType.m */,
+				4320F1FE1926231500779D9C /* Meter.h */,
+				4320F1FF1926231500779D9C /* Meter.m */,
+				4320F1FB1926231400779D9C /* ScanEventDueDate.h */,
+				4320F1FC1926231400779D9C /* ScanEventDueDate.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		43C6BDEE19237159004E8768 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +174,7 @@
 		43C6BDF919237159004E8768 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4320F1E619260E0C00779D9C /* CoreData.framework */,
 				43B211091924B170005F9378 /* EventKit.framework */,
 				43C6BDFA19237159004E8768 /* Foundation.framework */,
 				43C6BDFC19237159004E8768 /* CoreGraphics.framework */,
@@ -144,6 +188,7 @@
 		43C6BE0019237159004E8768 /* MeterMan */ = {
 			isa = PBXGroup;
 			children = (
+				4320F1EB1926223400779D9C /* Entities */,
 				43C6BE3F19239243004E8768 /* Utils */,
 				43C6BE381923854F004E8768 /* Model */,
 				43C6BE34192384C0004E8768 /* ViewControllers */,
@@ -165,6 +210,7 @@
 				43C6BE0619237159004E8768 /* main.m */,
 				43C6BE0819237159004E8768 /* MeterMan-Prefix.pch */,
 				43B211121924B652005F9378 /* Localizable.strings */,
+				4320F1E81926101700779D9C /* MeterMan.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -205,6 +251,8 @@
 				43C6BE3D19238B37004E8768 /* MeterListViewController.m */,
 				43735C4E1923BA7100C73C28 /* MeterScanningsViewController.h */,
 				43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */,
+				439B1F4D19263467008E93B2 /* AddMeterViewController.h */,
+				439B1F4E19263467008E93B2 /* AddMeterViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,6 +271,8 @@
 			children = (
 				43C6BE431923927D004E8768 /* MeterManUtil.h */,
 				43C6BE441923927D004E8768 /* MeterManUtil.m */,
+				4320F20A1926268800779D9C /* DBUtil.h */,
+				4320F20B1926268800779D9C /* DBUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -369,10 +419,18 @@
 				43735C501923BA7100C73C28 /* MeterScanningsViewController.m in Sources */,
 				43C6BE3B19238572004E8768 /* MeterDetails.m in Sources */,
 				43C6BE451923927D004E8768 /* MeterManUtil.m in Sources */,
+				4320F20C1926268800779D9C /* DBUtil.m in Sources */,
 				43C6BE0B19237159004E8768 /* AppDelegate.m in Sources */,
 				43C6BE3E19238B37004E8768 /* MeterListViewController.m in Sources */,
 				43C6BE0719237159004E8768 /* main.m in Sources */,
+				4320F1FD1926231400779D9C /* ScanEventDueDate.m in Sources */,
+				4320F1EA1926101700779D9C /* MeterMan.xcdatamodeld in Sources */,
+				4320F2031926231500779D9C /* UtilityType.m in Sources */,
 				43C6BE37192384FB004E8768 /* UtilitiesViewController.m in Sources */,
+				4320F2001926231500779D9C /* Meter.m in Sources */,
+				439B1F4F19263467008E93B2 /* AddMeterViewController.m in Sources */,
+				4320F2091926231500779D9C /* ScanData.m in Sources */,
+				4320F2061926231500779D9C /* ScanEventType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +667,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4320F1E81926101700779D9C /* MeterMan.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4320F1E91926101700779D9C /* MeterMan.xcdatamodel */,
+			);
+			currentVersion = 4320F1E91926101700779D9C /* MeterMan.xcdatamodel */;
+			path = MeterMan.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 43C6BDEF19237159004E8768 /* Project object */;
 }

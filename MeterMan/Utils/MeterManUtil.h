@@ -13,11 +13,16 @@
 @interface MeterManUtil : NSObject
 
 + (UIImage *)imageWithText:(NSString *)text usingFont:(UIFont *)font andSize:(CGSize)size;
-+ (UIColor *)bgColorForUtilityType:(UtilityType)type;
++ (UIColor *)bgColorForUtilityType:(PublicUtilityType)type;
 
 + (EKCalendar *)meterManCalendar;
 
 + (void)createReminderWithTitle:(NSString *)reminderTitle forDate:(NSDate *)reminderDate;
+
+
++ (UIImage *)imageForPublicUtilityType:(PublicUtilityType)publicUtilityType;
+
++ (void)informUserWithMessage:(NSString *)message title:(NSString *)title;
 
 
 

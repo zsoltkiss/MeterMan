@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MeterDetails.h"
+#import "Meter.h"
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 
 @interface MeterScanningsViewController : UIViewController <PDTSimpleCalendarViewDelegate>
@@ -17,9 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbAlias;
 @property (weak, nonatomic) IBOutlet UILabel *lbMeterId;
 @property (weak, nonatomic) IBOutlet UILabel *lbInstallationAddress;
+@property (weak, nonatomic) IBOutlet UILabel *lbOwner;
+@property (weak, nonatomic) IBOutlet UILabel *lbSupplierPhone;
 
-@property(nonatomic, strong) MeterDetails *meterDetails;
+@property(nonatomic, strong) Meter *selectedMeter;
 
 - (IBAction)addReminder:(id)sender;
+- (IBAction)supplierPhoneLabelTapped:(UITapGestureRecognizer *)sender;
 
 @end

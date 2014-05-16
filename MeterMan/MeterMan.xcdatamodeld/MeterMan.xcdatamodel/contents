@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Meter" representedClassName="Meter" syncable="YES">
+        <attribute name="alias" attributeType="String" syncable="YES"/>
+        <attribute name="installationAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="moreProperties" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ownerName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productNumber" attributeType="String" syncable="YES"/>
+        <attribute name="supplierPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dueDateItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScanEventDueDate" inverseName="meter" inverseEntity="ScanEventDueDate" syncable="YES"/>
+        <relationship name="scanDataItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ScanData" inverseName="meter" inverseEntity="ScanData" syncable="YES"/>
+        <relationship name="utilityType" maxCount="1" deletionRule="Nullify" destinationEntity="UtilityType" syncable="YES"/>
+    </entity>
+    <entity name="ScanData" representedClassName="ScanData" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="valueRead" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="meter" maxCount="1" deletionRule="Nullify" destinationEntity="Meter" inverseName="scanDataItems" inverseEntity="Meter" syncable="YES"/>
+        <relationship name="scanEventType" maxCount="1" deletionRule="Nullify" destinationEntity="ScanEventType" syncable="YES"/>
+    </entity>
+    <entity name="ScanEventDueDate" representedClassName="ScanEventDueDate" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <relationship name="meter" maxCount="1" deletionRule="Nullify" destinationEntity="Meter" inverseName="dueDateItems" inverseEntity="Meter" syncable="YES"/>
+        <relationship name="scanEventType" maxCount="1" deletionRule="Nullify" destinationEntity="ScanEventType" syncable="YES"/>
+    </entity>
+    <entity name="ScanEventType" representedClassName="ScanEventType" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="typeId" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="UtilityType" representedClassName="UtilityType" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="typeId" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Meter" positionX="-1332" positionY="-171" width="128" height="178"/>
+        <element name="ScanData" positionX="-965" positionY="174" width="128" height="103"/>
+        <element name="ScanEventDueDate" positionX="-963" positionY="-306" width="128" height="88"/>
+        <element name="ScanEventType" positionX="-776" positionY="-120" width="128" height="73"/>
+        <element name="UtilityType" positionX="-1440" positionY="-351" width="128" height="73"/>
+    </elements>
+</model>

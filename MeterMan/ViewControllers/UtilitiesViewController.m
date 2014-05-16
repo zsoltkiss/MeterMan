@@ -39,11 +39,11 @@
     MeterListViewController *nextVC = (MeterListViewController *)segue.destinationViewController;
     
     if ([segue.identifier isEqualToString:@"pushFromWater"]) {
-        nextVC.type = UtilityTypeWater;
+        nextVC.type = PublicUtilityTypeWater;
     } else if ([segue.identifier isEqualToString:@"pushFromGas"]) {
-        nextVC.type = UtilityTypeGas;
+        nextVC.type = PublicUtilityTypeGas;
     } else if ([segue.identifier isEqualToString:@"pushFromElectricity"]) {
-        nextVC.type = UtilityTypeElectricity;
+        nextVC.type = PublicUtilityTypeElectricity;
     }
 }
 

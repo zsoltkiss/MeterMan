@@ -10,6 +10,11 @@
 
 static NSString * const APP_CALENDAR_KEY = @"MeterManCalendar";
 
+static CGSize const SIZE_FOR_TYPE_IMAGE = {40.0f, 40.0f};
+static CGFloat const FONT_SIZE_FOR_TYPE_IMAGE = 28.0f;
+static NSString * const FONT_FAMILY_FOR_TYPE_IMAGE = @"GillSans";       // Verdana-Bold, Copperplate-Bold, GillSans
+
+
 @implementation MeterManUtil
 
 
@@ -43,17 +48,17 @@ static NSString * const APP_CALENDAR_KEY = @"MeterManCalendar";
 
 }
 
-+ (UIColor *)bgColorForUtilityType:(UtilityType)type {
++ (UIColor *)bgColorForUtilityType:(PublicUtilityType)type {
     switch (type) {
-        case UtilityTypeWater:
+        case PublicUtilityTypeWater:
             return [UIColor colorWithRed:208/255.0f green:222/255.0f blue:245/255.0f alpha:1.0];
             break;
             
-        case UtilityTypeGas:
+        case PublicUtilityTypeGas:
             return [UIColor colorWithRed:208/255.0f green:222/255.0f blue:86/255.0f alpha:1.0];
             break;
             
-        case UtilityTypeElectricity:
+        case PublicUtilityTypeElectricity:
             return [UIColor colorWithRed:208/255.0f green:130/255.0f blue:86/255.0f alpha:1.0];
             break;
     }
@@ -134,6 +139,37 @@ static NSString * const APP_CALENDAR_KEY = @"MeterManCalendar";
     
     
     
+}
+
+
++ (UIImage *)imageForPublicUtilityType:(PublicUtilityType)publicUtilityType {
+    UIFont *font = [UIFont fontWithName:FONT_FAMILY_FOR_TYPE_IMAGE size:FONT_SIZE_FOR_TYPE_IMAGE];
+    NSString *nameOfTheUtility = nil;
+    
+    switch (publicUtilityType) {
+        case PublicUtilityTypeWater:
+            nameOfTheUtility = NSLocalizedString(@"Water", @"Supply name: water");
+            break;
+            
+        case PublicUtilityTypeGas:
+            nameOfTheUtility = NSLocalizedString(@"Gas", @"Supply name: gas");;
+            break;
+            
+        case PublicUtilityTypeElectricity:
+            nameOfTheUtility = NSLocalizedString(@"Electricity", @"Supply name: electricity");
+            break;
+            
+    }
+    
+    NSString *firstLetter = [nameOfTheUtility substringToIndex:1];
+    
+    return [MeterManUtil imageWithText:firstLetter usingFont:font andSize:SIZE_FOR_TYPE_IMAGE];
+    
+}
+
++ (void)informUserWithMessage:(NSString *)message title:(NSString *)title {
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [av show];
 }
 
 

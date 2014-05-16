@@ -9,9 +9,7 @@
 #import "MeterDetails.h"
 #import "MeterManUtil.h"
 
-static CGSize const SIZE_FOR_TYPE_IMAGE = {40.0f, 40.0f};
-static CGFloat const FONT_SIZE_FOR_TYPE_IMAGE = 28.0f;
-static NSString * const FONT_FAMILY_FOR_TYPE_IMAGE = @"GillSans";       // Verdana-Bold, Copperplate-Bold, GillSans
+
 
 @interface MeterDetails () {
     NSMutableDictionary *_properties;
@@ -27,37 +25,37 @@ static NSString * const FONT_FAMILY_FOR_TYPE_IMAGE = @"GillSans";       // Verda
 
 #pragma Class methods
 
-+ (UIImage *)imageForType:(UtilityType)type {
-    UIFont *font = [UIFont fontWithName:FONT_FAMILY_FOR_TYPE_IMAGE size:FONT_SIZE_FOR_TYPE_IMAGE];
-    NSString *nameOfTheUtility = nil;
-    
-    switch (type) {
-        case UtilityTypeWater:
-            nameOfTheUtility = NSLocalizedString(@"Water", @"Supply name: water");
-            break;
-            
-        case UtilityTypeGas:
-            nameOfTheUtility = NSLocalizedString(@"Gas", @"Supply name: gas");;
-            break;
-            
-        case UtilityTypeElectricity:
-            nameOfTheUtility = NSLocalizedString(@"Electricity", @"Supply name: electricity");
-            break;
-            
-    }
-    
-    NSString *firstLetter = [nameOfTheUtility substringToIndex:1];
-    
-    return [MeterManUtil imageWithText:firstLetter usingFont:font andSize:SIZE_FOR_TYPE_IMAGE];
-    
-}
+//+ (UIImage *)imageForType:(PublicUtilityType)type {
+//    UIFont *font = [UIFont fontWithName:FONT_FAMILY_FOR_TYPE_IMAGE size:FONT_SIZE_FOR_TYPE_IMAGE];
+//    NSString *nameOfTheUtility = nil;
+//    
+//    switch (type) {
+//        case PublicUtilityTypeWater:
+//            nameOfTheUtility = NSLocalizedString(@"Water", @"Supply name: water");
+//            break;
+//            
+//        case PublicUtilityTypeGas:
+//            nameOfTheUtility = NSLocalizedString(@"Gas", @"Supply name: gas");;
+//            break;
+//            
+//        case PublicUtilityTypeElectricity:
+//            nameOfTheUtility = NSLocalizedString(@"Electricity", @"Supply name: electricity");
+//            break;
+//            
+//    }
+//    
+//    NSString *firstLetter = [nameOfTheUtility substringToIndex:1];
+//    
+//    return [MeterManUtil imageWithText:firstLetter usingFont:font andSize:SIZE_FOR_TYPE_IMAGE];
+//    
+//}
 
 #pragma mark - Initialization
 - (instancetype)init {
     return nil;
 }
 
-- (instancetype)initWithType:(UtilityType)type {
+- (instancetype)initWithType:(PublicUtilityType)type {
     self = [super init];
     
     if (self) {
@@ -68,9 +66,9 @@ static NSString * const FONT_FAMILY_FOR_TYPE_IMAGE = @"GillSans";       // Verda
 }
 
 #pragma mark - Custom getter
-- (UIImage *)typeImage {
-    return [MeterDetails imageForType:self.type];
-}
+//- (UIImage *)typeImage {
+//    return [MeterDetails imageForType:self.type];
+//}
 
 #pragma mark - Public methods
 - (void)addPropertyWithKey:(NSString *)key andValue:(NSString *)value {

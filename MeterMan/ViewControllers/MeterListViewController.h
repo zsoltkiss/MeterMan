@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MeterDetails.h"
 
 @interface MeterListViewController : UITableViewController
 
-@property(nonatomic, assign) UtilityType type;      ///< Utility type of meters shown on the table view
+@property(nonatomic, assign) PublicUtilityType type;      ///< Utility type of meters shown on the table view
+
+@property(nonatomic, assign) BOOL refreshNeeded;
 
 @end
