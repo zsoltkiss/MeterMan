@@ -18,7 +18,8 @@ static const NSInteger TAG_FOR_IMAGE_VIEW_HOLDER_ON_CELL = 101;
 static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
 
 @interface MeterListViewController () {
-    NSArray *_metersForCurrentType;
+//    NSArray *_metersForCurrentType;
+    NSArray *_meters;
 }
 
 @end
@@ -44,10 +45,13 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.view.backgroundColor = [UIColor colorWithRed:189/255.0f green:190/255.0f blue:194/255.0f alpha:1.0f];
+    
     self.navigationController.navigationBar.hidden = NO;
     
     self.navigationItem.rightBarButtonItem.target = self;
     self.navigationItem.rightBarButtonItem.action = @selector(rightBarButtonItemTapped:);
+    
     
     [self refreshDatasource];
     
@@ -79,7 +83,7 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_metersForCurrentType count];
+    return [_meters count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,25 +97,19 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
     }
     
     // Display recipe in the table cell
-    Meter *aMeter = [_metersForCurrentType objectAtIndex:indexPath.row];
-    UIView *holderView = (UIView *)[cell viewWithTag:TAG_FOR_IMAGE_VIEW_HOLDER_ON_CELL];
-    holderView.backgroundColor = [MeterManUtil bgColorForUtilityType:[aMeter.utilityType.typeId integerValue]];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[MeterManUtil imageForPublicUtilityType:[aMeter.utilityType.typeId integerValue]]];
-//    imageView.backgroundColor = [MeterManUtil bgColorForUtilityType:details.type];
+    Meter *aMeter = [_meters objectAtIndex:indexPath.row];
     
-    CGFloat x = (CGRectGetWidth(holderView.frame) - CGRectGetWidth(imageView.frame)) / 2;
-    CGFloat y = (CGRectGetHeight(holderView.frame) - CGRectGetHeight(imageView.frame)) / 2;
+    cell.textLabel.text = aMeter.alias;
+    cell.detailTextLabel.text = aMeter.productNumber;
+    cell.imageView.image = [MeterManUtil imageForPublicUtilityType:[aMeter.utilityType.typeId integerValue]];
     
-    CGRect rect = imageView.frame;
-    rect.origin.x = x;
-    rect.origin.y = y;
-    imageView.frame = rect;
+    UIColor *bgColor = [MeterManUtil backgroundColorForPublicUtilityType:[aMeter.utilityType.typeId integerValue]];
     
-    [holderView addSubview:imageView];
-//    imageView.center = holderView.center;
+    if (bgColor == nil) {
+        bgColor = [UIColor colorWithRed:189/255.0f green:190/255.0f blue:194/255.0f alpha:1.0f];
+    }
     
-    UILabel *lbAlias = (UILabel *)[cell viewWithTag:TAG_FOR_LABEL_ON_CELL];
-    lbAlias.text = aMeter.alias;
+    cell.backgroundColor = bgColor;
     
     return cell;
 }
@@ -162,7 +160,10 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
 #pragma mark - Private methods
 
 - (void)refreshDatasource {
-    _metersForCurrentType = [DBUtil metersByPublicUtilityType:self.type];
+//    _metersForCurrentType = [DBUtil metersByPublicUtilityType:self.type];
+    
+    _meters = [DBUtil allMeters];
+    
 }
 
 
@@ -174,7 +175,7 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
     
     if ([segue.identifier isEqualToString:@"AddMeter"]) {
         AddMeterViewController *nextVC = (AddMeterViewController *)segue.destinationViewController;
-        nextVC.utilityType = self.type;
+        nextVC.publicUtilityType = self.type;
         
     } else if ([segue.identifier isEqualToString:@"MeterDetails"]) {
         
@@ -182,7 +183,7 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
         
         Meter *selectedMeter = nil;
         if (ip && ip.row >= 0) {
-            selectedMeter = [_metersForCurrentType objectAtIndex:ip.row];
+            selectedMeter = [_meters objectAtIndex:ip.row];
         }
         
         if (selectedMeter) {

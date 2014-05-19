@@ -13,16 +13,25 @@
 @interface MeterScanningsViewController : UIViewController <PDTSimpleCalendarViewDelegate>
 
 
-@property (weak, nonatomic) IBOutlet UIView *holderView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *lbAlias;
 @property (weak, nonatomic) IBOutlet UILabel *lbMeterId;
 @property (weak, nonatomic) IBOutlet UILabel *lbInstallationAddress;
 @property (weak, nonatomic) IBOutlet UILabel *lbOwner;
 @property (weak, nonatomic) IBOutlet UILabel *lbSupplierPhone;
 
+//@property (nonatomic, assign) BOOL refreshNeeded;
+
 @property(nonatomic, strong) Meter *selectedMeter;
 
-- (IBAction)addReminder:(id)sender;
+- (IBAction)composeReminders:(UIBarButtonItem *)sender;
+- (IBAction)showHistory:(UIBarButtonItem *)sender;
+
+- (IBAction)persistMeterData:(UIBarButtonItem *)sender;
+
+- (IBAction)editMeterDetails:(UIBarButtonItem *)sender;
+
+
 - (IBAction)supplierPhoneLabelTapped:(UITapGestureRecognizer *)sender;
 
 @end

@@ -13,7 +13,7 @@
 @interface MeterManUtil : NSObject
 
 + (UIImage *)imageWithText:(NSString *)text usingFont:(UIFont *)font andSize:(CGSize)size;
-+ (UIColor *)bgColorForUtilityType:(PublicUtilityType)type;
+//+ (UIColor *)bgColorForUtilityType:(PublicUtilityType)type;
 
 + (EKCalendar *)meterManCalendar;
 
@@ -23,6 +23,13 @@
 + (UIImage *)imageForPublicUtilityType:(PublicUtilityType)publicUtilityType;
 
 + (void)informUserWithMessage:(NSString *)message title:(NSString *)title;
+
++ (void)setNavigationBarAppearence;
+
+
++ (CALayer *)gradientBGLayerForBounds:(CGRect)bounds color1:(UIColor *)color1 color2:(UIColor *)color2;
+
++ (UIColor *)backgroundColorForPublicUtilityType:(PublicUtilityType)publicUtilityType;
 
 
 

@@ -9,15 +9,15 @@
             <objects>
                 <viewController title="Home" id="vXZ-lx-hvc" customClass="UtilitiesViewController" sceneMemberID="viewController">
                     <view key="view" alpha="0.59999999999999964" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="utility_meter.jpg" id="Nsk-eW-IP4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <view alpha="0.74999999999999978" contentMode="scaleToFill" id="Lb5-jr-XjJ">
-                                <rect key="frame" x="0.0" y="84" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="172" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l18-i6-vE3">
@@ -32,10 +32,10 @@
                                         </connections>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.81678427419354838" green="0.86964465725806406" blue="0.95923639112903225" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view alpha="0.75" contentMode="scaleToFill" id="68o-0p-fC0">
-                                <rect key="frame" x="0.0" y="192" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="280" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gas" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jek-Wg-i1Q">
@@ -50,10 +50,10 @@
                                         </connections>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.81678427419999999" green="0.86964465729999996" blue="0.33615801410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.82745098039215681" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view alpha="0.75" contentMode="scaleToFill" id="qu8-YD-gYo">
-                                <rect key="frame" x="0.0" y="300" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="388" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electricity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JhA-ZF-Tx2">
@@ -68,7 +68,7 @@
                                         </connections>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.81678427419999999" green="0.508757560483871" blue="0.33615801410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -100,9 +100,9 @@
         <!--Add Meter View Controller-->
         <scene sceneID="2le-7e-0Xz">
             <objects>
-                <viewController id="vuy-Fb-Gts" customClass="AddMeterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addEditMeter" id="vuy-Fb-Gts" customClass="AddMeterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mJQ-p3-h37">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZpG-cd-s7E">
@@ -169,7 +169,7 @@
                                 <rect key="frame" x="220" y="430" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
-                                <state key="normal" title="Add">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -227,6 +227,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="NVt-dp-ZUV"/>
                     <connections>
+                        <outlet property="addEditButton" destination="Mb5-uR-IxQ" id="rgQ-Gp-ezp"/>
+                        <outlet property="lbTitle" destination="XK7-iv-KyN" id="uFQ-IS-C89"/>
                         <outlet property="lbUtilityType" destination="55c-zg-S47" id="fKg-sf-Uam"/>
                         <outlet property="tfAddress" destination="obc-We-wFX" id="OWv-lX-jT0"/>
                         <outlet property="tfAlias" destination="lVX-Jc-FQg" id="Utk-VB-pYp"/>
@@ -244,30 +246,35 @@
             <objects>
                 <tableViewController title="My meters" id="m1a-GE-j7Q" customClass="MeterListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="tzG-38-8Br">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.74117647060000003" green="0.74509803919999995" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeterDetailsCell" rowHeight="65" id="lwO-UQ-1Bx">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MeterDetailsCell" textLabel="XL8-ZE-MZj" detailTextLabel="o7l-xf-Veq" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="lwO-UQ-1Bx">
                                 <rect key="frame" x="0.0" y="86" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lwO-UQ-1Bx" id="L60-4O-vh9">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4vq-vX-a0K">
-                                            <rect key="frame" x="60" y="10" width="240" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XL8-ZE-MZj">
+                                            <rect key="frame" x="15" y="14" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view tag="101" contentMode="scaleToFill" id="4UX-Sw-Y2x">
-                                            <rect key="frame" x="5" y="5" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o7l-xf-Veq">
+                                            <rect key="frame" x="15" y="36" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.74117647058823533" green="0.74509803921568629" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="S0g-zg-z8S" kind="push" identifier="MeterDetails" id="KUL-IW-463"/>
                                 </connections>
@@ -278,8 +285,8 @@
                             <outlet property="delegate" destination="m1a-GE-j7Q" id="6J6-m8-rfx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My meters" id="UZz-xn-lrJ">
-                        <barButtonItem key="backBarButtonItem" title="My meters" id="AOb-Yp-IhO"/>
+                    <navigationItem key="navigationItem" title="MY METERS" id="UZz-xn-lrJ">
+                        <barButtonItem key="backBarButtonItem" title="My Meters" id="AOb-Yp-IhO"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FJG-i9-M0N">
                             <connections>
                                 <segue destination="vuy-Fb-Gts" kind="modal" identifier="AddMeter" modalTransitionStyle="coverVertical" id="QmK-4M-wWD"/>
@@ -292,31 +299,14 @@
             </objects>
             <point key="canvasLocation" x="1260" y="4"/>
         </scene>
-        <!--Meter Scannings View Controller-->
+        <!--Meter Scannings View Controller - Details-->
         <scene sceneID="pem-zy-m4r">
             <objects>
                 <viewController id="S0g-zg-z8S" customClass="MeterScanningsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BpU-KR-n1k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="hhg-if-LOb">
-                                <rect key="frame" x="10" y="90" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S7X-IO-sDY">
-                                <rect key="frame" x="10" y="361" width="300" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
-                                <state key="normal" title="Show reminders">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addReminder:" destination="S0g-zg-z8S" eventType="touchUpInside" id="Ruo-1W-Pmq"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pVr-T9-dpY">
                                 <rect key="frame" x="80" y="93" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -352,12 +342,47 @@
                                     <outletCollection property="gestureRecognizers" destination="dbI-cQ-iKl" appends="YES" id="ZNs-ju-GUb"/>
                                 </connections>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bXy-RY-a3e">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="compose" id="bdZ-fU-SYZ">
+                                        <connections>
+                                            <action selector="composeReminders:" destination="S0g-zg-z8S" id="6aE-Y9-5Jn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="search" id="YJq-Od-87g">
+                                        <connections>
+                                            <action selector="showHistory:" destination="S0g-zg-z8S" id="kIf-gu-1lZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZOM-0R-RWM"/>
+                                    <barButtonItem systemItem="action" id="O9Q-Wm-xpy">
+                                        <connections>
+                                            <action selector="persistMeterData:" destination="S0g-zg-z8S" id="aJ0-aY-2dw"/>
+                                            <segue destination="z2S-I0-AWI" kind="push" id="NMm-UK-j5f"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Qb4-SM-4j4"/>
+                                    <barButtonItem systemItem="edit" id="yQB-S2-OcC">
+                                        <connections>
+                                            <action selector="editMeterDetails:" destination="S0g-zg-z8S" id="zQ2-ja-ReQ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="kHy-RW-eji">
+                                <rect key="frame" x="10" y="94" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5Fn-MJ-W4I"/>
+                    <navigationItem key="navigationItem" title="Details" id="5Fn-MJ-W4I">
+                        <barButtonItem key="backBarButtonItem" title="Details" id="yfC-wq-khU"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="holderView" destination="hhg-if-LOb" id="PGW-x5-bjS"/>
+                        <outlet property="imgView" destination="kHy-RW-eji" id="9UF-fz-6gb"/>
                         <outlet property="lbAlias" destination="pVr-T9-dpY" id="nYk-6R-eBJ"/>
                         <outlet property="lbInstallationAddress" destination="8OO-pK-9VE" id="Z2J-m9-Tgu"/>
                         <outlet property="lbMeterId" destination="LJN-0d-M18" id="ee3-0W-kOb"/>
@@ -373,6 +398,72 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1797" y="4"/>
+        </scene>
+        <!--Scan Now View Controller-->
+        <scene sceneID="UIk-Jk-gYS">
+            <objects>
+                <viewController id="z2S-I0-AWI" customClass="ScanNowViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GpZ-gd-AYI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o7c-ey-XhR">
+                                <rect key="frame" x="11" y="90" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the meter's current value" minimumFontSize="17" id="ylH-Wk-Swn">
+                                <rect key="frame" x="119" y="86" width="190" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="z2S-I0-AWI" id="d1A-5E-pTs"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Xp2-6f-3r9">
+                                <rect key="frame" x="40" y="140" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IUo-Vi-r4T">
+                                <rect key="frame" x="60" y="400" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take a picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shotAPicture:" destination="z2S-I0-AWI" eventType="touchUpInside" id="HIc-6A-tWr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fng-MT-mwl">
+                                <rect key="frame" x="20" y="444" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="ric-6j-dBb" appends="YES" id="VvI-qB-jdX"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yah-hA-6rD"/>
+                    <connections>
+                        <outlet property="imageView" destination="Xp2-6f-3r9" id="JtY-DK-tNU"/>
+                        <outlet property="lbSupplierPhone" destination="fng-MT-mwl" id="FAe-Oe-geK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1IM-VC-RSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ric-6j-dBb">
+                    <connections>
+                        <action selector="supplierPhoneLabelTapped:" destination="z2S-I0-AWI" id="Pkp-I6-B8b"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2267" y="4"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KH2-o1-2NY">
@@ -399,7 +490,7 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="tzG-c7-tya"/>

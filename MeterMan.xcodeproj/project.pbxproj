@@ -16,6 +16,16 @@
 		4320F2091926231500779D9C /* ScanData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F2081926231500779D9C /* ScanData.m */; };
 		4320F20C1926268800779D9C /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F20B1926268800779D9C /* DBUtil.m */; };
 		43735C501923BA7100C73C28 /* MeterScanningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */; };
+		438F0DF1192A33DC00C59E15 /* utility_electric.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DEB192A33DB00C59E15 /* utility_electric.png */; };
+		438F0DF2192A33DC00C59E15 /* utility_electric@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DEC192A33DC00C59E15 /* utility_electric@2x.png */; };
+		438F0DF3192A33DC00C59E15 /* utility_gas.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DED192A33DC00C59E15 /* utility_gas.png */; };
+		438F0DF4192A33DC00C59E15 /* utility_gas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DEE192A33DC00C59E15 /* utility_gas@2x.png */; };
+		438F0DF5192A33DC00C59E15 /* utility_water.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DEF192A33DC00C59E15 /* utility_water.png */; };
+		438F0DF6192A33DC00C59E15 /* utility_water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DF0192A33DC00C59E15 /* utility_water@2x.png */; };
+		438F0DF8192A386A00C59E15 /* sticky-notes1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DF7192A386A00C59E15 /* sticky-notes1.jpg */; };
+		438F0DFA192A394A00C59E15 /* pencil-and-notepad-icon-vector-989694.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DF9192A394A00C59E15 /* pencil-and-notepad-icon-vector-989694.jpg */; };
+		438F0DFC192A39D900C59E15 /* notePad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DFB192A39D900C59E15 /* notePad.jpg */; };
+		438F0DFF192A52EB00C59E15 /* ScanNowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438F0DFE192A52EB00C59E15 /* ScanNowViewController.m */; };
 		439B1F4F19263467008E93B2 /* AddMeterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439B1F4E19263467008E93B2 /* AddMeterViewController.m */; };
 		43B2110A1924B170005F9378 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B211091924B170005F9378 /* EventKit.framework */; };
 		43B211101924B652005F9378 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43B211121924B652005F9378 /* Localizable.strings */; };
@@ -68,6 +78,17 @@
 		4320F20B1926268800779D9C /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
 		43735C4E1923BA7100C73C28 /* MeterScanningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterScanningsViewController.h; sourceTree = "<group>"; };
 		43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterScanningsViewController.m; sourceTree = "<group>"; };
+		438F0DEB192A33DB00C59E15 /* utility_electric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility_electric.png; sourceTree = "<group>"; };
+		438F0DEC192A33DC00C59E15 /* utility_electric@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "utility_electric@2x.png"; sourceTree = "<group>"; };
+		438F0DED192A33DC00C59E15 /* utility_gas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility_gas.png; sourceTree = "<group>"; };
+		438F0DEE192A33DC00C59E15 /* utility_gas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "utility_gas@2x.png"; sourceTree = "<group>"; };
+		438F0DEF192A33DC00C59E15 /* utility_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility_water.png; sourceTree = "<group>"; };
+		438F0DF0192A33DC00C59E15 /* utility_water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "utility_water@2x.png"; sourceTree = "<group>"; };
+		438F0DF7192A386A00C59E15 /* sticky-notes1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sticky-notes1.jpg"; sourceTree = "<group>"; };
+		438F0DF9192A394A00C59E15 /* pencil-and-notepad-icon-vector-989694.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pencil-and-notepad-icon-vector-989694.jpg"; sourceTree = "<group>"; };
+		438F0DFB192A39D900C59E15 /* notePad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notePad.jpg; sourceTree = "<group>"; };
+		438F0DFD192A52EB00C59E15 /* ScanNowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanNowViewController.h; sourceTree = "<group>"; };
+		438F0DFE192A52EB00C59E15 /* ScanNowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanNowViewController.m; sourceTree = "<group>"; };
 		439B1F4D19263467008E93B2 /* AddMeterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMeterViewController.h; sourceTree = "<group>"; };
 		439B1F4E19263467008E93B2 /* AddMeterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMeterViewController.m; sourceTree = "<group>"; };
 		43B211091924B170005F9378 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -236,6 +257,15 @@
 		43C6BE2F1923731C004E8768 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				438F0DFB192A39D900C59E15 /* notePad.jpg */,
+				438F0DF9192A394A00C59E15 /* pencil-and-notepad-icon-vector-989694.jpg */,
+				438F0DF7192A386A00C59E15 /* sticky-notes1.jpg */,
+				438F0DEB192A33DB00C59E15 /* utility_electric.png */,
+				438F0DEC192A33DC00C59E15 /* utility_electric@2x.png */,
+				438F0DED192A33DC00C59E15 /* utility_gas.png */,
+				438F0DEE192A33DC00C59E15 /* utility_gas@2x.png */,
+				438F0DEF192A33DC00C59E15 /* utility_water.png */,
+				438F0DF0192A33DC00C59E15 /* utility_water@2x.png */,
 				43C6BE3019237375004E8768 /* utility_meter.jpg */,
 				43C6BE3119237375004E8768 /* utility_meter@2x.jpg */,
 			);
@@ -253,6 +283,8 @@
 				43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */,
 				439B1F4D19263467008E93B2 /* AddMeterViewController.h */,
 				439B1F4E19263467008E93B2 /* AddMeterViewController.m */,
+				438F0DFD192A52EB00C59E15 /* ScanNowViewController.h */,
+				438F0DFE192A52EB00C59E15 /* ScanNowViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -361,9 +393,18 @@
 			files = (
 				43C6BE3219237375004E8768 /* utility_meter.jpg in Resources */,
 				43B211101924B652005F9378 /* Localizable.strings in Resources */,
+				438F0DF2192A33DC00C59E15 /* utility_electric@2x.png in Resources */,
+				438F0DF6192A33DC00C59E15 /* utility_water@2x.png in Resources */,
+				438F0DF1192A33DC00C59E15 /* utility_electric.png in Resources */,
+				438F0DF8192A386A00C59E15 /* sticky-notes1.jpg in Resources */,
 				43C6BE3319237375004E8768 /* utility_meter@2x.jpg in Resources */,
+				438F0DFA192A394A00C59E15 /* pencil-and-notepad-icon-vector-989694.jpg in Resources */,
+				438F0DF5192A33DC00C59E15 /* utility_water.png in Resources */,
 				43C6BE1319237159004E8768 /* Images.xcassets in Resources */,
 				43C6BE0519237159004E8768 /* InfoPlist.strings in Resources */,
+				438F0DF4192A33DC00C59E15 /* utility_gas@2x.png in Resources */,
+				438F0DF3192A33DC00C59E15 /* utility_gas.png in Resources */,
+				438F0DFC192A39D900C59E15 /* notePad.jpg in Resources */,
 				43C6BE0E19237159004E8768 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +467,7 @@
 				4320F1FD1926231400779D9C /* ScanEventDueDate.m in Sources */,
 				4320F1EA1926101700779D9C /* MeterMan.xcdatamodeld in Sources */,
 				4320F2031926231500779D9C /* UtilityType.m in Sources */,
+				438F0DFF192A52EB00C59E15 /* ScanNowViewController.m in Sources */,
 				43C6BE37192384FB004E8768 /* UtilitiesViewController.m in Sources */,
 				4320F2001926231500779D9C /* Meter.m in Sources */,
 				439B1F4F19263467008E93B2 /* AddMeterViewController.m in Sources */,

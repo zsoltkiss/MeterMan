@@ -136,6 +136,27 @@ NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY = @"ELECTRICITY";
     
 }
 
++ (NSArray *)allMeters {
+    
+    
+    NSManagedObjectContext *ctx = [DBUtil managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    [request setEntity:[NSEntityDescription entityForName:@"Meter" inManagedObjectContext:ctx]];
+    
+    NSError *error = nil;
+    NSArray *results = [ctx executeFetchRequest:request error:&error];
+    
+    if (error) {
+        NSLog(@"Error when fetching Meter entities: %@", error.localizedDescription);
+    }
+    
+    return results;
+    
+    
+}
+
+
 + (NSString *)utilityCommonNameByType:(PublicUtilityType)publicUtilityType {
     
     NSString *utilityCommonName = nil;

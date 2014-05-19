@@ -9,6 +9,8 @@
 #import "MeterScanningsViewController.h"
 #import "MeterManUtil.h"
 #import "UtilityType.h"
+#import "AddMeterViewController.h"
+#import "ScanNowViewController.h"
 
 @interface MeterScanningsViewController () {
     PDTSimpleCalendarViewController *_calendarVC;
@@ -35,31 +37,7 @@
     self.lbInstallationAddress.text = nil;
     self.lbMeterId.text = nil;
     
-    if (self.selectedMeter) {
-        UIImage *typeImage =    [MeterManUtil imageForPublicUtilityType:[self.selectedMeter.utilityType.typeId integerValue]];              
-        UIImageView *imgView = [[UIImageView alloc] initWithImage:typeImage];
-        
-        CGFloat x = (CGRectGetWidth(self.holderView.frame) - CGRectGetWidth(imgView.frame)) / 2;
-        CGFloat y = (CGRectGetHeight(self.holderView.frame) - CGRectGetHeight(imgView.frame)) / 2;
-        
-        CGRect frame = imgView.frame;
-        frame.origin.x = x;
-        frame.origin.y = y;
-        
-        imgView.frame = frame;
-        
-        [self.holderView addSubview:imgView];
-//        imgView.center = self.holderView.center;
-        
-        self.lbAlias.text = self.selectedMeter.alias;
-        self.lbInstallationAddress.text = self.selectedMeter.installationAddress;
-        self.lbMeterId.text = self.selectedMeter.productNumber;
-        self.lbOwner.text = self.selectedMeter.ownerName;
-        self.lbSupplierPhone.text = self.selectedMeter.supplierPhone;
-
-
-        
-    }
+    
     
 //    PDTSimpleCalendarViewController *calendarViewController = [[PDTSimpleCalendarViewController alloc] init];
 //    //This is the default behavior, will display a full year starting the first of the current month
@@ -83,6 +61,10 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self refreshControls];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -94,6 +76,19 @@
     NSLog(@"selected date: %@", date);
 }
 
+
+- (void)refreshControls {
+    if (self.selectedMeter) {
+        UIImage *typeImage =    [MeterManUtil imageForPublicUtilityType:[self.selectedMeter.utilityType.typeId integerValue]];
+        self.view.backgroundColor = [MeterManUtil backgroundColorForPublicUtilityType:[self.selectedMeter.utilityType.typeId integerValue]];
+        self.imgView.image = typeImage;
+        self.lbAlias.text = self.selectedMeter.alias;
+        self.lbInstallationAddress.text = self.selectedMeter.installationAddress;
+        self.lbMeterId.text = self.selectedMeter.productNumber;
+        self.lbOwner.text = self.selectedMeter.ownerName;
+        self.lbSupplierPhone.text = self.selectedMeter.supplierPhone;
+    }
+}
 
 
 - (IBAction)addReminder:(id)sender {
@@ -127,6 +122,31 @@
     
 }
 
+- (IBAction)composeReminders:(UIBarButtonItem *)sender {
+}
+
+- (IBAction)showHistory:(UIBarButtonItem *)sender {
+}
+
+- (IBAction)persistMeterData:(UIBarButtonItem *)sender {
+}
+
+- (IBAction)editMeterDetails:(UIBarButtonItem *)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+     AddMeterViewController *editVC = [storyboard instantiateViewControllerWithIdentifier:@"addEditMeter"];
+    
+    editVC.meterToEdit = self.selectedMeter;
+    
+    [self presentViewController:editVC animated:YES completion:nil];
+    
+}
+
+- (IBAction)dismissDetailsScreen:(UIBarButtonItem *)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (IBAction)supplierPhoneLabelTapped:(UITapGestureRecognizer *)sender {
     
     NSString *phoneCallNum = [NSString stringWithFormat:@"tel://%@",self.selectedMeter.supplierPhone];
@@ -136,4 +156,10 @@
     NSLog(@"phone btn touch %@", phoneCallNum);
     
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ScanNowViewController *scanNowVC = (ScanNowViewController *)segue.destinationViewController;
+    scanNowVC.selectedMeter = self.selectedMeter;
+}
+
 @end

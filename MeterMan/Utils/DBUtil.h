@@ -34,5 +34,5 @@ extern NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY;
 + (UtilityType *)utilityTypeForCommonName:(NSString *)name;
 
 + (NSArray *)metersByPublicUtilityType:(PublicUtilityType)publicUtilityType;
-
++ (NSArray *)allMeters;
 @end
