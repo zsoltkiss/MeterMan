@@ -20,8 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbOwner;
 @property (weak, nonatomic) IBOutlet UILabel *lbSupplierPhone;
 
-//@property (nonatomic, assign) BOOL refreshNeeded;
-
 @property(nonatomic, strong) Meter *selectedMeter;
 
 - (IBAction)composeReminders:(UIBarButtonItem *)sender;

@@ -5,10 +5,31 @@
   Created by Zsolt Kiss on 2014.05.15..
   Copyright (c) 2014 Zsolt Kiss. All rights reserved.
 */
+"Cancel" = "Mégsem";
+"Save" = "Mentés";
+
 "Water" = "Víz";
 "Gas" = "Gáz";
 "Electricity" = "Áram";
 "Meter check is due" = "Mérőóra leolvasás";
 
+"Details" = "Részletes adatok";
 
 "Missing data" = "Nincs megadva minden kötelező adat";
+
+
+"Type" = "Típus";
+"Alias" = "Egyedi név";
+"Address" = "Cím";
+"Product No." = "Gyári szám";
+"Owner name" = "Tulajdonos";
+"Supplier phone" = "Szolg. tel.:";
+
+"Arbitrary name for this meter" = "Tetszőleges azonosító";
+"Installation address (optional)" = "Felszerelési hely (opcionális)";
+"Product number (optional)" = "A mérő gyári száma (opcionális)";
+"Name of the owner (optional)" = "Tulajdonos neve (opcionális)";
+"Supplier company service phone (optional)" = "Ügyfélszolgálat száma";
+
+"Add new meter" = "Új mérőóra hozzáadása";
+"Edit your meter details" = "Adatok szerkesztése";

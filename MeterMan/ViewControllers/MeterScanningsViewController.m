@@ -37,6 +37,8 @@
     self.lbInstallationAddress.text = nil;
     self.lbMeterId.text = nil;
     
+    self.title = NSLocalizedString(@"Details", @"View title");
+    
     
     
 //    PDTSimpleCalendarViewController *calendarViewController = [[PDTSimpleCalendarViewController alloc] init];
@@ -129,12 +131,13 @@
 }
 
 - (IBAction)persistMeterData:(UIBarButtonItem *)sender {
+    
 }
 
 - (IBAction)editMeterDetails:(UIBarButtonItem *)sender {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-     AddMeterViewController *editVC = [storyboard instantiateViewControllerWithIdentifier:@"addEditMeter"];
+    AddMeterViewController *editVC = [storyboard instantiateViewControllerWithIdentifier:@"addEditMeter"];
     
     editVC.meterToEdit = self.selectedMeter;
     
@@ -142,10 +145,6 @@
     
 }
 
-- (IBAction)dismissDetailsScreen:(UIBarButtonItem *)sender {
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (IBAction)supplierPhoneLabelTapped:(UITapGestureRecognizer *)sender {
     

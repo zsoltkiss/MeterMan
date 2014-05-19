@@ -16,7 +16,15 @@
 
 @property (nonatomic, weak) Meter *meterToEdit;
 
+@property (weak, nonatomic) IBOutlet UILabel *lbType;
 @property (weak, nonatomic) IBOutlet UILabel *lbUtilityType;
+@property (weak, nonatomic) IBOutlet UILabel *lbAlias;
+@property (weak, nonatomic) IBOutlet UILabel *lbAddress;
+@property (weak, nonatomic) IBOutlet UILabel *lbProductNo;
+@property (weak, nonatomic) IBOutlet UILabel *lbOwnerName;
+@property (weak, nonatomic) IBOutlet UILabel *lbSupplierPhone;
+
+
 @property (weak, nonatomic) IBOutlet UITextField *tfAlias;
 @property (weak, nonatomic) IBOutlet UITextField *tfAddress;
 @property (weak, nonatomic) IBOutlet UITextField *tfProductNo;
@@ -26,6 +34,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
+@property (weak, nonatomic) IBOutlet UIButton *btnSave;
 
 - (IBAction)addMeter:(id)sender;
 - (IBAction)cancelAdding:(id)sender;
