@@ -10,7 +10,7 @@
 #import "Meter.h"
 #import "UtilityType.h"
 #import "MeterManUtil.h"
-#import "MeterScanningsViewController.h"
+#import "MeterDetailsViewController.h"
 #import "AddMeterViewController.h"
 #import "DBUtil.h"
 
@@ -187,7 +187,7 @@ static const NSInteger TAG_FOR_LABEL_ON_CELL = 102;
         }
         
         if (selectedMeter) {
-            MeterScanningsViewController *nextVC = (MeterScanningsViewController *)segue.destinationViewController;
+            MeterDetailsViewController *nextVC = (MeterDetailsViewController *)segue.destinationViewController;
             nextVC.selectedMeter = selectedMeter;
         }
     }

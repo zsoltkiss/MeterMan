@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * valueRead;
 @property (nonatomic, retain) NSDate * date;
+@property (nonatomic, retain) NSNumber * photoTaken;
 @property (nonatomic, retain) Meter *meter;
 @property (nonatomic, retain) ScanEventType *scanEventType;
 

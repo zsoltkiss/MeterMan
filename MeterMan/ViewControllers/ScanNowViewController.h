@@ -13,10 +13,12 @@
 
 @property (nonatomic, weak) Meter *selectedMeter;
 
+@property (weak, nonatomic) IBOutlet UITextField *tfCurrentValue;
 @property (weak, nonatomic) IBOutlet UILabel *lbSupplierPhone;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
-- (IBAction)shotAPicture:(id)sender;
+- (IBAction)documentWithPhoto:(id)sender;
+- (IBAction)scoreUp:(id)sender;
 
 - (IBAction)supplierPhoneLabelTapped:(UITapGestureRecognizer *)sender;
 

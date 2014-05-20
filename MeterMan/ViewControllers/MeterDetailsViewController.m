@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 Zsolt Kiss. All rights reserved.
 //
 
-#import "MeterScanningsViewController.h"
+#import "MeterDetailsViewController.h"
 #import "MeterManUtil.h"
 #import "UtilityType.h"
 #import "AddMeterViewController.h"
 #import "ScanNowViewController.h"
 
-@interface MeterScanningsViewController () {
+@interface MeterDetailsViewController () {
     PDTSimpleCalendarViewController *_calendarVC;
 }
 
 @end
 
-@implementation MeterScanningsViewController
+@implementation MeterDetailsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

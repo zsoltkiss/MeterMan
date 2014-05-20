@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3394" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Meter" representedClassName="Meter" syncable="YES">
         <attribute name="alias" attributeType="String" syncable="YES"/>
         <attribute name="installationAddress" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,6 +13,7 @@
     </entity>
     <entity name="ScanData" representedClassName="ScanData" syncable="YES">
         <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="photoTaken" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="valueRead" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="meter" maxCount="1" deletionRule="Nullify" destinationEntity="Meter" inverseName="scanDataItems" inverseEntity="Meter" syncable="YES"/>
         <relationship name="scanEventType" maxCount="1" deletionRule="Nullify" destinationEntity="ScanEventType" syncable="YES"/>
@@ -32,9 +33,9 @@
     </entity>
     <elements>
         <element name="Meter" positionX="-1332" positionY="-171" width="128" height="178"/>
-        <element name="ScanData" positionX="-965" positionY="174" width="128" height="103"/>
+        <element name="ScanData" positionX="-956" positionY="113" width="164" height="103"/>
         <element name="ScanEventDueDate" positionX="-963" positionY="-306" width="128" height="88"/>
-        <element name="ScanEventType" positionX="-776" positionY="-120" width="128" height="73"/>
+        <element name="ScanEventType" positionX="-675" positionY="-120" width="128" height="73"/>
         <element name="UtilityType" positionX="-1440" positionY="-351" width="128" height="73"/>
     </elements>
 </model>

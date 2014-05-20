@@ -18,6 +18,10 @@ extern NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_WATER;
 extern NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_GAS;
 extern NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY;
 
+
+extern NSString * const COMMON_NAME_FOR_YEARLY_SCAN;
+extern NSString * const COMMON_NAME_FOR_MONTHLY_SCAN;
+
 @interface DBUtil : NSObject
 
 + (Meter *)meterAsBlankEntity;
@@ -35,4 +39,9 @@ extern NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY;
 
 + (NSArray *)metersByPublicUtilityType:(PublicUtilityType)publicUtilityType;
 + (NSArray *)allMeters;
+
++ (NSArray *)scanDataForMeter:(Meter *)meter;
++ (NSArray *)scanDataWithPhotoForMeter:(Meter *)meter;
+
++ (ScanEventType *)scanEventTypeForReadPeriod:(MeterReadPeriod)period;
 @end

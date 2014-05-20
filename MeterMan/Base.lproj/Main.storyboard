@@ -307,10 +307,10 @@
             </objects>
             <point key="canvasLocation" x="1260" y="4"/>
         </scene>
-        <!--Meter Scannings View Controller - Details-->
+        <!--Meter Details View Controller - Details-->
         <scene sceneID="pem-zy-m4r">
             <objects>
-                <viewController id="S0g-zg-z8S" customClass="MeterScanningsViewController" sceneMemberID="viewController">
+                <viewController id="S0g-zg-z8S" customClass="MeterDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BpU-KR-n1k">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -416,13 +416,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o7c-ey-XhR">
-                                <rect key="frame" x="11" y="90" width="100" height="21"/>
+                                <rect key="frame" x="11" y="59" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the meter's current value" minimumFontSize="17" id="ylH-Wk-Swn">
-                                <rect key="frame" x="119" y="86" width="190" height="30"/>
+                                <rect key="frame" x="119" y="55" width="190" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
@@ -431,17 +431,17 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Xp2-6f-3r9">
-                                <rect key="frame" x="40" y="140" width="240" height="240"/>
+                                <rect key="frame" x="40" y="109" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IUo-Vi-r4T">
-                                <rect key="frame" x="60" y="400" width="200" height="30"/>
+                                <rect key="frame" x="60" y="369" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take a picture">
+                                <state key="normal" title="Document with photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="shotAPicture:" destination="z2S-I0-AWI" eventType="touchUpInside" id="HIc-6A-tWr"/>
+                                    <action selector="documentWithPhoto:" destination="z2S-I0-AWI" eventType="touchUpInside" id="P48-2D-xG2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supplier phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fng-MT-mwl">
@@ -455,6 +455,16 @@
                                     <outletCollection property="gestureRecognizers" destination="ric-6j-dBb" appends="YES" id="VvI-qB-jdX"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SnP-w5-RJ7">
+                                <rect key="frame" x="60" y="406" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Score up">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scoreUp:" destination="z2S-I0-AWI" eventType="touchUpInside" id="PbG-DE-toK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -462,6 +472,7 @@
                     <connections>
                         <outlet property="imageView" destination="Xp2-6f-3r9" id="JtY-DK-tNU"/>
                         <outlet property="lbSupplierPhone" destination="fng-MT-mwl" id="FAe-Oe-geK"/>
+                        <outlet property="tfCurrentValue" destination="ylH-Wk-Swn" id="YUt-9J-1Wo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1IM-VC-RSA" userLabel="First Responder" sceneMemberID="firstResponder"/>

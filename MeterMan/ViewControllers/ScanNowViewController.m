@@ -7,6 +7,8 @@
 //
 
 #import "ScanNowViewController.h"
+#import "DBUtil.h"
+#import "ScanData.h"
 
 @interface ScanNowViewController ()
 
@@ -37,7 +39,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)shotAPicture:(id)sender {
+- (IBAction)documentWithPhoto:(id)sender {
     
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -59,6 +61,34 @@
         
         [self presentViewController:picker animated:YES completion:NULL];
     }
+    
+}
+
+- (IBAction)scoreUp:(id)sender {
+    
+    if (self.tfCurrentValue.text.length > 0) {
+        ScanData *newData = [DBUtil scanDataAsBlankEntity];
+        newData.valueRead = @([self.tfCurrentValue.text doubleValue]);
+        newData.date = [NSDate date];
+        newData.meter = self.selectedMeter;
+        newData.scanEventType = [DBUtil scanEventTypeForReadPeriod:MeterReadPeriodMonthlyScan];
+        
+        if (self.imageView.image != nil) {
+            NSArray *previousDataWithPhoto = [DBUtil scanDataWithPhotoForMeter:self.selectedMeter];
+            
+            for (ScanData *oldData in previousDataWithPhoto) {
+                oldData.photoTaken = @(0);
+            }
+            
+            newData.photoTaken = @(1);
+        }
+        
+        [DBUtil commit];
+        
+    }
+    
+    
+    
     
 }
 

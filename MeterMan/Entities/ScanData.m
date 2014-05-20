@@ -15,6 +15,7 @@
 
 @dynamic valueRead;
 @dynamic date;
+@dynamic photoTaken;
 @dynamic meter;
 @dynamic scanEventType;
 

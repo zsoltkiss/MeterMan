@@ -15,7 +15,7 @@
 		4320F2061926231500779D9C /* ScanEventType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F2051926231500779D9C /* ScanEventType.m */; };
 		4320F2091926231500779D9C /* ScanData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F2081926231500779D9C /* ScanData.m */; };
 		4320F20C1926268800779D9C /* DBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4320F20B1926268800779D9C /* DBUtil.m */; };
-		43735C501923BA7100C73C28 /* MeterScanningsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */; };
+		43735C501923BA7100C73C28 /* MeterDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43735C4F1923BA7100C73C28 /* MeterDetailsViewController.m */; };
 		438F0DF1192A33DC00C59E15 /* utility_electric.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DEB192A33DB00C59E15 /* utility_electric.png */; };
 		438F0DF2192A33DC00C59E15 /* utility_electric@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DEC192A33DC00C59E15 /* utility_electric@2x.png */; };
 		438F0DF3192A33DC00C59E15 /* utility_gas.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F0DED192A33DC00C59E15 /* utility_gas.png */; };
@@ -49,6 +49,7 @@
 		43C6BE3E19238B37004E8768 /* MeterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C6BE3D19238B37004E8768 /* MeterListViewController.m */; };
 		43C6BE451923927D004E8768 /* MeterManUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C6BE441923927D004E8768 /* MeterManUtil.m */; };
 		85531C6FF6984F39B9204DB4 /* libPods-MeterMan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F7B9F867AC84D9CB527E392 /* libPods-MeterMan.a */; };
+		D7B5E1B2192BF6D700794321 /* ScanHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B5E1B1192BF6D700794321 /* ScanHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +77,8 @@
 		4320F2081926231500779D9C /* ScanData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanData.m; sourceTree = "<group>"; };
 		4320F20A1926268800779D9C /* DBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBUtil.h; sourceTree = "<group>"; };
 		4320F20B1926268800779D9C /* DBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBUtil.m; sourceTree = "<group>"; };
-		43735C4E1923BA7100C73C28 /* MeterScanningsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterScanningsViewController.h; sourceTree = "<group>"; };
-		43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterScanningsViewController.m; sourceTree = "<group>"; };
+		43735C4E1923BA7100C73C28 /* MeterDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterDetailsViewController.h; sourceTree = "<group>"; };
+		43735C4F1923BA7100C73C28 /* MeterDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterDetailsViewController.m; sourceTree = "<group>"; };
 		438F0DEB192A33DB00C59E15 /* utility_electric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility_electric.png; sourceTree = "<group>"; };
 		438F0DEC192A33DC00C59E15 /* utility_electric@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "utility_electric@2x.png"; sourceTree = "<group>"; };
 		438F0DED192A33DC00C59E15 /* utility_gas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = utility_gas.png; sourceTree = "<group>"; };
@@ -126,6 +127,8 @@
 		43C6BE441923927D004E8768 /* MeterManUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterManUtil.m; sourceTree = "<group>"; };
 		4D96FAEE8BD84B45A45D6778 /* Pods-MeterMan.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeterMan.xcconfig"; path = "Pods/Pods-MeterMan.xcconfig"; sourceTree = "<group>"; };
 		7F7B9F867AC84D9CB527E392 /* libPods-MeterMan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeterMan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B5E1B0192BF6D700794321 /* ScanHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanHistoryViewController.h; sourceTree = "<group>"; };
+		D7B5E1B1192BF6D700794321 /* ScanHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,12 +282,14 @@
 				43C6BE36192384FB004E8768 /* UtilitiesViewController.m */,
 				43C6BE3C19238B37004E8768 /* MeterListViewController.h */,
 				43C6BE3D19238B37004E8768 /* MeterListViewController.m */,
-				43735C4E1923BA7100C73C28 /* MeterScanningsViewController.h */,
-				43735C4F1923BA7100C73C28 /* MeterScanningsViewController.m */,
+				43735C4E1923BA7100C73C28 /* MeterDetailsViewController.h */,
+				43735C4F1923BA7100C73C28 /* MeterDetailsViewController.m */,
 				439B1F4D19263467008E93B2 /* AddMeterViewController.h */,
 				439B1F4E19263467008E93B2 /* AddMeterViewController.m */,
 				438F0DFD192A52EB00C59E15 /* ScanNowViewController.h */,
 				438F0DFE192A52EB00C59E15 /* ScanNowViewController.m */,
+				D7B5E1B0192BF6D700794321 /* ScanHistoryViewController.h */,
+				D7B5E1B1192BF6D700794321 /* ScanHistoryViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -457,12 +462,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43735C501923BA7100C73C28 /* MeterScanningsViewController.m in Sources */,
+				43735C501923BA7100C73C28 /* MeterDetailsViewController.m in Sources */,
 				43C6BE3B19238572004E8768 /* MeterDetails.m in Sources */,
 				43C6BE451923927D004E8768 /* MeterManUtil.m in Sources */,
 				4320F20C1926268800779D9C /* DBUtil.m in Sources */,
 				43C6BE0B19237159004E8768 /* AppDelegate.m in Sources */,
 				43C6BE3E19238B37004E8768 /* MeterListViewController.m in Sources */,
+				D7B5E1B2192BF6D700794321 /* ScanHistoryViewController.m in Sources */,
 				43C6BE0719237159004E8768 /* main.m in Sources */,
 				4320F1FD1926231400779D9C /* ScanEventDueDate.m in Sources */,
 				4320F1EA1926101700779D9C /* MeterMan.xcdatamodeld in Sources */,

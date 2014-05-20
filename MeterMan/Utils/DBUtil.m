@@ -18,6 +18,9 @@ NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_WATER = @"WATER";
 NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_GAS = @"GAS";
 NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY = @"ELECTRICITY";
 
+NSString * const COMMON_NAME_FOR_YEARLY_SCAN = @"YEARLY_READ";
+NSString * const COMMON_NAME_FOR_MONTHLY_SCAN = @"MONTHLY_READ";
+
 @implementation DBUtil
 
 
@@ -81,6 +84,14 @@ NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY = @"ELECTRICITY";
         
         electricitySupply.typeId = @(PublicUtilityTypeElectricity);
         electricitySupply.name = COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY;
+        
+        ScanEventType *eventTypeMonthlyScan = [DBUtil scanEventTypeAsBlankEntity];
+        eventTypeMonthlyScan.typeId = @(MeterReadPeriodMonthlyScan);
+        eventTypeMonthlyScan.name = COMMON_NAME_FOR_MONTHLY_SCAN;
+        
+        ScanEventType *eventTypeYearlyScan = [DBUtil scanEventTypeAsBlankEntity];
+        eventTypeYearlyScan.typeId = @(MeterReadPeriodYearlyScan);
+        eventTypeYearlyScan.name = COMMON_NAME_FOR_YEARLY_SCAN;
 
         [DBUtil commit];
         
@@ -138,7 +149,6 @@ NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY = @"ELECTRICITY";
 
 + (NSArray *)allMeters {
     
-    
     NSManagedObjectContext *ctx = [DBUtil managedObjectContext];
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
@@ -153,7 +163,43 @@ NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY = @"ELECTRICITY";
     
     return results;
     
+}
+
++ (NSArray *)scanDataForMeter:(Meter *)meter {
     
+    NSManagedObjectContext *ctx = [DBUtil managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"meter == %@", meter];
+    [request setEntity:[NSEntityDescription entityForName:@"ScanData" inManagedObjectContext:ctx]];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *results = [ctx executeFetchRequest:request error:&error];
+    
+    if (error) {
+        NSLog(@"Error when fetching ScanData entities: %@", error.localizedDescription);
+    }
+    
+    return results;
+}
+
++ (NSArray *)scanDataWithPhotoForMeter:(Meter *)meter {
+    NSManagedObjectContext *ctx = [DBUtil managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"meter == %@ and photoTaken > 0", meter];
+    [request setEntity:[NSEntityDescription entityForName:@"ScanData" inManagedObjectContext:ctx]];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *results = [ctx executeFetchRequest:request error:&error];
+    
+    if (error) {
+        NSLog(@"Error when fetching ScanData entities: %@", error.localizedDescription);
+    }
+
+    return results;
 }
 
 
@@ -179,6 +225,40 @@ NSString * const COMMON_NAME_FOR_SUPPLY_TYPE_ELECTRICITY = @"ELECTRICITY";
     }
     
     return utilityCommonName;
+    
+}
+
++ (ScanEventType *)scanEventTypeForReadPeriod:(MeterReadPeriod)period {
+    NSNumber *numTypeId = nil;
+    switch (period) {
+        case MeterReadPeriodMonthlyScan:
+            numTypeId = @(MeterReadPeriodMonthlyScan);
+            break;
+            
+        case MeterReadPeriodYearlyScan:
+            numTypeId = @(MeterReadPeriodYearlyScan);
+            break;
+            
+        default:
+            break;
+    }
+    
+    
+    NSManagedObjectContext *ctx = [DBUtil managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"typeId == %@", numTypeId];
+    [request setEntity:[NSEntityDescription entityForName:@"ScanEventType" inManagedObjectContext:ctx]];
+    [request setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *results = [ctx executeFetchRequest:request error:&error];
+    
+    if (error) {
+        NSLog(@"Error when fetching ScanEventType entities: %@", error.localizedDescription);
+    }
+    
+    return (results.count > 0) ? results[0] : nil;
     
 }
 

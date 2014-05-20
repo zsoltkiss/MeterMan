@@ -22,3 +22,8 @@ typedef NS_ENUM(NSUInteger, PublicUtilityType) {
     PublicUtilityTypeElectricity
 };
 
+
+typedef NS_ENUM(NSUInteger, MeterReadPeriod) {
+    MeterReadPeriodMonthlyScan,
+    MeterReadPeriodYearlyScan
+};

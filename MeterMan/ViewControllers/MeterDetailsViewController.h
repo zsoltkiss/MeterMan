@@ -10,7 +10,7 @@
 #import "Meter.h"
 #import <PDTSimpleCalendar/PDTSimpleCalendar.h>
 
-@interface MeterScanningsViewController : UIViewController <PDTSimpleCalendarViewDelegate>
+@interface MeterDetailsViewController : UIViewController <PDTSimpleCalendarViewDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
